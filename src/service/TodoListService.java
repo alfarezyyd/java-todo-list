@@ -45,12 +45,12 @@ public class TodoListService {
         int index = Integer.parseInt(userInput);
 
         // optional: validasi index > 0
-        if (index <= 1) {
-          System.out.println("Input must be greater than 1!");
+        if (index <= 0) {
+          System.out.println("Input must be greater than 0!");
           continue;
         }
 
-        todoListEntity.deleteTodoListByIndex(index);
+        todoListEntity.deleteTodoListByIndex(index - 1);
         break;
 
       } catch (NumberFormatException e) {

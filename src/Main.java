@@ -9,6 +9,7 @@ public static void main() {
   TodoList todoListEntity = new TodoList();
   TodoListService todoListService = new TodoListService(todoListEntity);
   Scanner scannerHelper = new Scanner();
+  todoListEntity.appendTodoList("TodoList 1");
 
   while (true) {
     todoListService.showTodoList();
